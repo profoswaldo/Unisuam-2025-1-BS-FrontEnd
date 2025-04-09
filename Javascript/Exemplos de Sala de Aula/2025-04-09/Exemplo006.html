@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validação de Formulário</title>
+<script>
+    function validarFormulario() {
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+
+        if (nome.trim() === '' || email.trim() === '') {
+            alert('Por favor, preencha todos os campos do formulário.');
+            return false;
+        }
+
+        if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+            alert('Por favor, insira um email válido.');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</head>
+<body>
+    <h1>Formulário de Contato</h1>
+    <form onsubmit="return validarFormulario()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+

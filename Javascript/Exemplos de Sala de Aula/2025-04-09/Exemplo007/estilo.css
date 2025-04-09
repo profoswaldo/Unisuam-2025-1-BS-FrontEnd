@@ -1,0 +1,54 @@
+/* Estilo aplicado ao corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada no documento */
+    margin: 20px; /* Espaçamento em torno do conteúdo */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo para o título */
+h1 {
+    color: #26d86d; /* Cor do texto do título */
+}
+
+/* Formatação básica do formulário */
+form {
+    max-width: 400px; /* Largura máxima do formulário */
+    margin: auto; /* Centraliza o formulário */
+}
+
+/* Estilo para os rótulos dos campos */
+label {
+    font-weight: bold; /* Define os rótulos como negrito */
+}
+
+/* Estilo para os campos de input */
+input {
+    width: 100%; /* Define que os campos ocupam 100% da largura disponível */
+    padding: 8px; /* Espaçamento interno nos campos */
+    margin-top: 5px; /* Espaçamento acima do campo */
+    margin-bottom: 15px; /* Espaçamento abaixo do campo */
+    border: 1px solid #ccc; /* Define a borda dos campos */
+    border-radius: 4px; /* Arredonda levemente os cantos das bordas */
+}
+
+/* Estilo para o botão de enviar */
+button {
+    background-color: #311473; /* Cor de fundo verde */
+    color: white; /* Cor do texto branco */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Arredonda levemente os cantos do botão */
+    cursor: pointer; /* Define o ponteiro ao passar sobre o botão */
+}
+
+/* Muda a cor do botão quando o mouse está sobre ele */
+button:hover {
+    background-color: #45a049; /* Cor verde mais escura */
+}
+
+/* Estilo para a mensagem de erro */
+.error {
+    color: red; /* Cor do texto de erro em vermelho */
+    font-weight: bold; /* Texto de erro em negrito */
+    margin-top: 10px; /* Espaçamento acima da mensagem de erro */
+}

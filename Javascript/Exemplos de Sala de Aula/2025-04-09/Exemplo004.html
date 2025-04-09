@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exibir Valor Retornado</title>
+    <script>
+        // Define uma função em JavaScript que recebe um parâmetro e retorna um valor
+        function retornarValor(nome) {
+            return "Professor " + nome;
+        }
+
+        // Exibe o valor retornado na página HTML
+        function exibirValor() {
+            // Obter o elemento HTML onde o valor será exibido
+            var elemento = document.getElementById("mensagem");
+
+            // Obter o nome a ser usado como parâmetro
+            var nome = "Oswaldo";
+            
+            // Obter o valor retornado pela função passando o parâmetro
+            var valor = retornarValor(nome);
+
+            // Exibir o valor retornado no elemento HTML
+            elemento.textContent = valor;
+        }
+    </script>
+</head>
+
+<body onload="exibirValor()">
+    <h1>Bem-vindo</h1>
+    
+    <!-- Elemento onde o valor retornado será exibido -->
+    <p id="mensagem"></p>
+</body>
+
+</html>

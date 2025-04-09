@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exibir Valor Retornado</title>
+    <script>
+        // Define uma função em JavaScript que recebe parâmetros e retorna um valor
+        function calcularSoma(a, b) {
+            return a + b;
+        }
+
+        // Exibe o valor retornado na página HTML
+        function exibirResultado() {
+            // Obter os valores dos campos de entrada
+            var inputA = document.getElementById("valorA").value;
+            var inputB = document.getElementById("valorB").value;
+
+            // Converter os valores para números
+            var a = parseFloat(inputA);
+            var b = parseFloat(inputB);
+
+            // Chamar a função com os valores fornecidos e obter o resultado
+            var resultado = calcularSoma(a, b);
+
+            // Exibir o resultado na página HTML
+            document.getElementById("resultado").textContent = "A soma é: " + resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo</h1>
+    <form>
+        <!-- Campos de entrada -->
+        <label for="valorA">Valor A:</label>
+        <input type="number" id="valorA"><br><br>
+
+        <label for="valorB">Valor B:</label>
+        <input type="number" id="valorB"><br><br>
+
+        <!-- Botão para calcular a soma e exibir o resultado -->
+        <button onclick="exibirResultado()">Calcular Soma</button><br><br>
+    </form>
+    
+    <!-- Elemento onde o valor retornado será exibido -->
+    <p id="resultado"></p>
+</body>
+
+</html>

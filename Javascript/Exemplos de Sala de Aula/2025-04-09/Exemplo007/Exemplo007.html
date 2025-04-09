@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade em dispositivos móveis -->
+    <title>Validação de Formulário</title> <!-- Título da página -->
+    <link rel="stylesheet" href="estilo.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+<body>
+    <h1>Formulário de Registro</h1> <!-- Título do formulário -->
+    
+    <!-- Início do formulário, sem validação automática do HTML5 (usamos JavaScript) -->
+    <form id="meuFormulario" novalidate>
+        <!-- Campo para o nome -->
+        <label for="nome">Nome:</label> 
+        <input type="text" id="nome" name="nome" required> <!-- Campo de texto para o nome, obrigatório -->
+        <br><br>
+        
+        <!-- Campo para o email -->
+        <label for="email">Email:</label> 
+        <input type="email" id="email" name="email" required> <!-- Campo de email, obrigatório -->
+        <br><br>
+        
+        <!-- Campo para a senha -->
+        <label for="senha">Senha:</label> 
+        <input type="password" id="senha" name="senha" required minlength="6"> <!-- Campo de senha, obrigatório, mínimo de 6 caracteres -->
+        <br><br>
+        
+        <!-- Botão para enviar o formulário -->
+        <button type="submit">Enviar</button>
+        
+        <!-- Parágrafo para exibir mensagens de erro -->
+        <p id="mensagemErro" class="error"></p>
+    </form>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="validacao.js"></script>
+</body>
+</html>
