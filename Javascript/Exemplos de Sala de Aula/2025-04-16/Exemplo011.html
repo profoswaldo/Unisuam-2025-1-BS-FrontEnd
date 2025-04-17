@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Tooltip</title>
+  <style>
+    /* Estilo para o Tooltip */
+    .tooltip {
+      visibility: hidden;  /* Inicialmente invisível */
+      background-color: #6c757d;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s; /* Efeito de transição */
+    }
+  </style>
+  <script>
+    // Função que mostra o Tooltip quando o mouse passa sobre o botão
+    function mostrarTooltip(event) {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.style.visibility = 'visible';  // Torna o Tooltip visível
+      tooltip.style.opacity = 1;  // Altera a opacidade para mostrar o Tooltip
+      tooltip.style.top = `${event.clientY + 10}px`;  // Ajusta a posição vertical
+      tooltip.style.left = `${event.clientX + 10}px`;  // Ajusta a posição horizontal
+    }
+
+    // Função que esconde o Tooltip quando o mouse sai do botão
+    function esconderTooltip() {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.style.visibility = 'hidden';  // Torna o Tooltip invisível
+      tooltip.style.opacity = 0;  // Altera a opacidade para escondê-lo
+    }
+
+    // Quando o DOM estiver carregado, adicionamos os event listeners
+    window.addEventListener('DOMContentLoaded', function() {
+      const botao = document.getElementById('botao');
+      
+      // Adiciona o evento de 'mouseover' para mostrar o Tooltip
+      botao.addEventListener('mouseover', mostrarTooltip);
+
+      // Adiciona o evento de 'mouseout' para esconder o Tooltip
+      botao.addEventListener('mouseout', esconderTooltip);
+    });
+  </script>
+</head>
+<body>
+  <h2>Exemplo de Tooltip</h2>
+  <button id="botao">Passe o mouse aqui</button>
+  
+  <!-- O Tooltip que será mostrado -->
+  <div id="tooltip" class="tooltip">Este é um Tooltip!</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Card com addEventListener</title>
+
+  <style>
+    /* Estilos do Card */
+    .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px auto;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+      color: #777;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <script>
+    // Função para ser chamada quando o botão do card for clicado
+    function mudarTextoCard() {
+      const cardTitulo = document.getElementById("tituloCard");
+      const cardDescricao = document.getElementById("descricaoCard");
+      cardTitulo.textContent = "Texto Alterado!";
+      cardDescricao.textContent = "Você clicou no botão. O conteúdo foi alterado.";
+    }
+
+    // Espera a página carregar para adicionar o evento
+    document.addEventListener("DOMContentLoaded", function() {
+      // Seleciona o botão dentro do Card
+      const botao = document.getElementById("botaoCard");
+      
+      // Adiciona o evento 'click' ao botão, chamando a função mudarTextoCard
+      botao.addEventListener("click", mudarTextoCard);
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Card com título, descrição e botão -->
+  <div class="card">
+    <h2 id="tituloCard">Título do Card</h2>
+    <p id="descricaoCard">Descrição do card. Clique no botão para alterar o texto.</p>
+    <button id="botaoCard">Clique aqui</button>
+  </div>
+
+</body>
+</html>

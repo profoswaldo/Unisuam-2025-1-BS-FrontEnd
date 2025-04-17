@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Radio Button com addEventListener</title>
+  
+  <script>
+    // Função que será chamada quando o usuário selecionar uma opção
+    function exibirEscolha() {
+      const escolha = document.querySelector('input[name="cor"]:checked'); // Pega o input selecionado
+      if (escolha) {
+        alert("Você escolheu a cor: " + escolha.value); // Exibe um alerta com o valor da cor
+      }
+    }
+
+    // O evento será adicionado aos radio buttons assim que a página carregar
+    document.addEventListener('DOMContentLoaded', () => {
+      const radios = document.querySelectorAll('input[name="cor"]'); // Seleciona todos os radio buttons com o nome 'cor'
+
+      // Para cada radio button, adiciona um ouvinte de evento de 'change'
+      radios.forEach(radio => {
+        radio.addEventListener('change', exibirEscolha); // Chama a função 'exibirEscolha' sempre que o usuário selecionar um radio
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>Escolha sua cor favorita:</h2>
+  
+  <!-- Grupo de radio buttons -->
+  <label>
+    <input type="radio" name="cor" value="Vermelho"> Vermelho
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="cor" value="Azul"> Azul
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="cor" value="Verde"> Verde
+  </label>
+
+</body>
+</html>
