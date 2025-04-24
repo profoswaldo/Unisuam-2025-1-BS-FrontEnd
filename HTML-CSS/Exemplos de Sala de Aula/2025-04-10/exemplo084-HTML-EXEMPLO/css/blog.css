@@ -1,0 +1,157 @@
+   /* Curso Alura Começando com CSS  */ 
+/* Exercicio Alura Curso CSS 
+   By : Joel Andrade;
+   */
+   /* Perdoe pela bagunça do css */
+   /* Desevolvido durante o curso */
+
+   body {
+   	font-family: "Time New Roman" serif;
+   	background-color: #F2FFFC;
+   	line-height: 1.5;
+   }
+   main h1 {
+   	font-family: "Open sans", sans-serif;
+   	text-align: center;
+   	color: #FFF;
+   	background-color: #851944;
+   	border-bottom: 10px solid black;
+   	font-size: 60px;
+   	text-transform: uppercase;
+   	padding:25px;
+   }
+   h2 {
+   	font-family: "Arial" sans-serif;
+   	font-size: 30px;
+   }
+   p {
+   	text-align: justify;
+   	margin: 20px 0;
+   }
+   .navegacao-site {
+   	background-color: #3C1D3D;
+   	color: #F2FFFC;
+   	text-align: center;
+   	padding: 20px;
+   	font-family: "Open Sans Condensed", sans-serif;
+   }
+   aside h1 {
+   	font-size: 30px;
+   	margin-bottom: 25px;
+   	text-transform: uppercase;
+   }
+   aside a {
+   	color: inherit;
+   }
+   .icones-sociais li {
+   	display: inline-block;
+   }
+   .icones-sociais a {
+   	display: block;
+   	width: 40px;
+   	height: 40px;
+   	text-indent: -9999px; /* pode usar assim para esconder a fontes ou  font-size: 0px; */
+   }
+  .github {
+      background-image: url(../img/github.png);
+   }
+   .twitter {
+      background-image: url(../img/twitter.png);
+   }
+   .linkedin {
+      background-image: url(../img/linkedin.png);
+   }
+
+   nav a {
+   	color: #F2FFFC;
+   }
+   main a {
+   	color: #851944;
+   }
+
+   blockquote {
+   	background-color: #D9E5E3;
+   	padding: 20px;
+   	border:10px solid #C2CCCA;
+   	width: 250px;
+   	margin: 20px 40px;
+   	box-sizing: border-box;
+   	border: 10px solid #C2CCCA;
+   }
+   strong {
+   	font-weight: bold;
+   }
+   em {
+   	font-style: italic;
+   }
+   h2 {
+   	font-size: 30px;
+   }
+   .rodape-da-pagina {
+   	background-color: #000;
+   	color: #F2FFFC;
+   	padding: 20px;
+   	clear: both;
+   	position: fixed;
+   	bottom: 0;
+   	width: 100%;
+   	box-sizing: border-box;
+   }
+   article {
+   	padding-bottom: 65px;
+   	border: 1px solid #ccc;
+   	margin-bottom: 20px;
+   	margin-right: 100px;
+   	margin-left: 100px;
+   }
+
+   /* by Joel */
+   .leia-mais {
+   	color: #FFF;
+   	border-radius: .5em;
+   	padding: 0.5em 1em;
+   	padding-bottom: .4em;
+   	text-decoration: none;
+   	background-color: #3C1D3D; 
+   	float: right;
+      font-size: 1em;
+
+   }
+   .leia-mais:hover {
+   	background-color: #851944;
+   }
+   .tags-noticias {
+   	float: right;
+   	clear: both;
+   }
+   /*  ######  */
+
+   /* Ajustando menus */
+   aside {
+   	float: right;
+   	clear: right;
+   	box-sizing: border-box;
+   	position: relative;
+   	top: 211px;
+   }
+   aside, img  {
+   	float: right;
+   	width: 15%;
+   	border-left: 10px solid black;
+   	border-bottom: 10px solid black;
+   }
+   .minha-foto {
+   	position: absolute;
+   	top: 0;
+   	right: 0;
+   }
+   main {
+   	float: left;
+   	width: 85%;
+   }
+   .container {
+      margin:auto 0px;
+      width:1000px;
+      padding-bottom: 200px;
+      padding: 50px;
+   }

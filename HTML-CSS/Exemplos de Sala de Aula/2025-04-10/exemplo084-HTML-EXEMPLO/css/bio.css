@@ -1,0 +1,142 @@
+   /* Curso Alura Começando com CSS  */ 
+/* Exercicio Alura Curso CSS 
+   By : Joel Andrade;
+   */
+   /* Perdoe pela bagunça do css */
+   /* Desevolvido durante o curso */
+   html {
+      font-size: 120%;
+   }
+   body {
+   	background-color: #F2FFFC;
+   	line-height: 1.5;
+      font-size: 120%;
+   }
+
+   main h1 {
+   	font-size: 300%;
+   	background-color: rgb(120, 30, 60);
+   	color: #FAFFFA;
+   	text-align: center;
+   	font-family: "Open sans", sans-serif;
+   	padding: 25px;
+   	margin: 0px;
+   	text-transform: uppercase;
+   	border-bottom: 10px solid black;
+   }
+   h2 {
+   	font-size: 40px;
+   	font-family: "Open Sans", sans-serif;
+   	clear: both;
+   }
+
+   p {
+   	text-align: justify;
+   	font-family: "Times New Roman", serif;
+   }
+   blockquote {
+   	background-color: #D9E5E3;
+   	padding: 1em;
+   	border: .5em solid #C2CCCA;
+   	width: 30ch;
+   	margin: 1em 2em;
+   	box-sizing: border-box;
+   }
+
+   aside {
+   	background-color: #3C1D3D;
+   	color: #F2FFFC;
+   	text-align: center;
+   	padding: 20px;
+   	font-family: "Open Sans Condensed", sans-serif;
+   	float: right;
+      clear: right;
+      box-sizing: border-box;
+      position: relative;
+      top: 211px;
+   }
+   aside, img {
+   	float: right;
+   	width: 15%;
+   	border-bottom: 10px solid black;
+   	border-left: 10px solid black;
+   }
+   aside h1 {
+   	font-size: 30px;
+   	margin-bottom: 25px;
+   	text-transform: uppercase;
+   }
+   aside a {
+   	color: inherit;
+
+   }
+   footer {
+   	background-color: #000;
+   	color: #F2FFFC;
+   	padding: 20px;
+   	clear: both;
+   	position: fixed;
+   	bottom: 0;
+   	width: 100%;
+   	box-sizing: border-box;
+   }
+
+   nav a {
+   	color: #F2FFFC;
+   }
+   main a {
+   	color: #851944;
+   }
+
+   .icones-sociais li {
+   	display: inline-block;
+   }
+   .icones-sociais a{
+   	display: block;
+   	width: 40px;
+   	height: 40px;
+   	font-size: 0px; /* pode usar assim para esconder as fontes ou 	text-indent: -9999px;*/
+   }
+   .github {
+   	background-image: url(../img/github.png);
+   }
+   .twitter {
+   	background-image: url(../img/twitter.png);
+   }
+   .linkedin {
+   	background-image: url(../img/linkedin.png);
+   }
+   div {
+   	margin-left: auto;
+   	margin-right: auto;
+   	width: 720px;
+   }
+   .fiat {
+   	float: right;
+   	margin-left: 50px;
+   }
+   .petrobras {
+   	float: left;
+   	margin-right: 50px;
+   }
+   main {
+   	float: left;
+   	width: 85%;
+   }
+   cite {
+   	font-style: italic;
+   	float: right;
+   	padding: 5px;
+   }
+   .minha-foto {
+   	position: absolute;
+   	top: 0;
+   	right: 0;
+   }
+   .container {
+   	margin: 0 auto;
+   	width: 600px;
+   	padding: 40px 0;
+   	padding-bottom: 100px;
+
+   }

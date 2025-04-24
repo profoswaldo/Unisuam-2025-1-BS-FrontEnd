@@ -1,0 +1,159 @@
+/* Desafios finais CSS + HTML */
+/* Alura Curso */
+/* By: Joey */
+
+body {
+	background-color: #F2FFFC;
+	line-height: 1.5;
+}
+.container {
+	margin: 0 auto;
+	width: 750px;
+	padding: 40px 0;
+	padding-bottom: 700px;
+}
+
+.conteudo-site h1 {
+	color: #fff;
+	font-size: 60px;
+	text-align: center;
+	background-color: rgb(120, 30, 60);
+	padding: 25px;
+	margin:0;
+	border-bottom: 10px solid black;
+	font-family: "Open sans", sans-serif;
+	text-transform: uppercase;
+}
+.menu-navegacao {
+	background-color: #3C1D3D;
+	color: #F2FFFC;
+	text-align: center;
+	padding: 20px;
+	font-family: "Open Sans Condensed", sans-serif;
+	float: right;
+	clear: right;
+	box-sizing: border-box;
+	position: relative;
+	top: 211px;
+	border-bottom: 10px solid black;
+	border-left: 10px solid black;
+}
+.menu-navegacao a {
+	color: #FFF;
+}
+.menu-navegacao h1{
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+/* deixa o site com 85% a esquerda */
+.s-1{
+	float: left;
+	width: 85%;
+}
+.menu-navegacao-img {
+
+}
+.minha-foto {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 15%;
+	float: right;
+	border-bottom: 10px solid black;
+	border-left: 10px solid black;
+}
+/* Menun navegação */
+.icones-sociais li {
+	display: inline-block;
+}
+.icones-sociais a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size: 0px;
+}
+.github {
+	background-image: url(../img/github.png);
+}
+.twitter {
+	background-image: url(../img/twitter.png);
+}
+.linkedin {
+	background-image: url(../img/linkedin.png);
+}
+
+/* Rodape da pagina */
+.rodape {
+	clear: both;
+	background: #000;
+	color: #FFF;
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	box-sizing: border-box;
+}
+div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 720px;
+}
+.conteudo-port-1 {
+	float: left;
+	border: 5px solid black;
+	margin: 20px;
+	padding-bottom: 10px;
+}
+.conteudo-port-1 a {
+	font-size: 20px;
+	display: block;
+	width: 300px;
+	text-align: center;
+	color: #FF0000;
+	font-family: "calibri";
+}
+
+.conteudo-port-2 {
+	float: right;
+	border: 5px solid black;
+	margin: 20px;
+	padding-bottom: 10px;
+}
+.conteudo-port-2 a {
+	font-size: 20px;
+	display: block;
+	width: 300px;
+	text-align: center;
+	color: #FF0000;
+	font-family: "calibri";
+}
+
+.conteudo-port-3 {
+	float: left;
+	border: 5px solid black;
+	margin: 20px;
+	padding-bottom: 10px;
+}
+.conteudo-port-3 a {
+	font-size: 20px;
+	display: block;
+	width: 300px;
+	text-align: center;
+	color: #FF0000;
+	font-family: "calibri";
+}
+
+.conteudo-port-4 {
+	float: right;
+	border: 5px solid black;
+	margin: 20px;
+	padding-bottom: 10px;
+}
+.conteudo-port-4 a {
+	font-size: 20px;
+	display: block;
+	width: 300px;
+	text-align: center;
+	color: #FF0000;
+	font-family: "calibri";
+}
