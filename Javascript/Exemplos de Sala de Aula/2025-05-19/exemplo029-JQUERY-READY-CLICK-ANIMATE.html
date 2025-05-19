@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo003</title>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script> 
+    $(document).ready(function(){
+      $("button").click(function(){
+        var div = $("div");  
+        div.animate({left: '100px'}, "slow");
+        div.animate({fontSize: '3em'}, "slow");
+      });
+    });
+    </script>
+
+</head>
+
+<body>
+
+  <button>Click-me</button>
+
+  <p>
+    Exemplo Animate
+  </p>
+
+  <div style="background:#98bf21;height:200px;width:200px;position:absolute;">
+      Oswaldo
+  </div>
+
+</body>
+
+</html>

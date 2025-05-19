@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo005</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("<b>Professor</b>");
+            });
+            $("#btn2").click(function () {
+                $("#test2").html("<b>Oswaldo</b>");
+            });
+            $("#btn3").click(function () {
+                $("#test3").val("Aula Front-end");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="test1">Parágrafo 1.</p>
+    <p id="test2">Parágrafo 2.</p>
+
+    <form>
+        Qual o seu nome?
+        <input type="text" id="test3" value="Digite o seu nome aqui">
+    </form>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo003</title>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("h1").slideToggle();
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  <!--
+    $(selector).slideToggle()( Velocidade, easing, callback )
+
+    Velocidade: é um parâmetro opcional e usado para especificar a velocidade do efeito de 
+    desvanecimento. O valor padrão da velocidade é 400 milissegundos. Os possíveis valores 
+    de velocidade são:
+          milissegundos
+          "devagar"
+          "velozes"
+    easing: é um parâmetro opcional e usado para especificar a velocidade do elemento para 
+    diferentes pontos de animação. O valor padrão de atenuação é “swing”. Os possíveis valores de atenuação são:
+         "balanço"
+         "linear"
+    callback: é um parâmetro opcional. A função de retorno de chamada é executada após o 
+    método slideToggle() ser concluído.
+  -->
+
+
+
+  <h1 style="color:green">
+    Exemplo slideToggle
+  </h1>
+
+  <button>
+    Click-me
+  </button>
+
+</body>
+
+</html>

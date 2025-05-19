@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo003</title>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#lbl').hide(); 
+
+      $('#btFadeIn').click(function () {
+        $('#lbl').fadeIn(3000, function () {
+          $(this).append("<br/>Click no botão Fade Out para mensagem desaparecer em 5 segundos");
+        });
+      });
+
+      $('#btFadeOut').click(function () {
+        $('#lbl').fadeOut(5000);
+      });
+    });
+  </script>
+
+  <style>
+    * {
+      font: 17px Calibri;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <p>Click no fadeIn</p>
+
+  <button id="btFadeIn">Fade In</button>
+  <button id="btFadeOut">Fade Out</button>
+  
+  <p><label id="lbl">Que tal? </label></p>
+
+</body>
+
+</html>
