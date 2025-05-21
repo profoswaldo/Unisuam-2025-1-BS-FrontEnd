@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário com jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .mensagem {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulário de Cadastro</h2>
+
+<form id="formCadastro">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome"><br><br>
+
+    <label for="email">E-mail:</label><br>
+    <input type="text" id="email"><br><br>
+
+    <label for="idade">Idade:</label><br>
+    <input type="number" id="idade"><br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<div id="mensagem" class="mensagem"></div>
+
+<script>
+$(document).ready(function(){
+    $("#formCadastro").on("submit", function(event){
+        event.preventDefault();  // Evita o envio padrão do formulário
+
+        // Captura os valores dos campos
+        var nome = $("#nome").val().trim();
+        var email = $("#email").val().trim();
+        var idade = $("#idade").val().trim();
+
+        // Seleciona a div de mensagem
+        var mensagem = $("#mensagem");
+
+        // Verifica se todos os campos estão preenchidos
+        if(nome === "" || email === "" || idade === "") {
+            mensagem.text("Por favor, preencha todos os campos!")
+                    .css("color", "red");
+        } else {
+            mensagem.text("Formulário enviado com sucesso!")
+                    .css("color", "green");
+
+            // Limpa os campos
+            $("#formCadastro")[0].reset();
+
+            // Coloca o foco no campo "Nome"
+            $("#nome").focus();
+        }
+
+        // Faz a mensagem desaparecer após 5 segundos
+        setTimeout(function(){
+            mensagem.text("");
+        }, 5000);
+    });
+});
+</script>
+
+</body>
+</html>
