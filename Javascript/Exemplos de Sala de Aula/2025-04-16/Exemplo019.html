@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Button com addEventListener</title>
+
+   
+    <script>
+        
+        function mudarTextoDoBotao() {
+            // Seleciona o botão pelo ID
+            const botao = document.getElementById("botao");
+
+            // Altera o texto do botão para "Você clicou!"
+            botao.textContent = "Você clicou!";
+        }
+
+        // Aqui estamos adicionando o ouvinte de evento ao carregar a página
+        window.addEventListener("DOMContentLoaded", function() {
+           
+            const botao = document.getElementById("botao");
+
+            // Adiciona o evento "click" ao botão
+            // Quando o botão for clicado, a função 'mudarTextoDoBotao' será chamada
+            botao.addEventListener("click", mudarTextoDoBotao);
+        });
+    </script>
+</head>
+<body>
+    <h2>Exemplo de Botão com addEventListener</h2>
+
+   
+    <button id="botao">Clique aqui para mudar o texto</button>
+
+</body>
+</html>

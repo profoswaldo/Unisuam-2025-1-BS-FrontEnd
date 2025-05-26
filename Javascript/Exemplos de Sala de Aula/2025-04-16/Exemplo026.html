@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Interativo com JavaScript</title>
+
+  <style>
+    /* Estilos básicos para o menu */
+    #menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: #333;
+    }
+
+    #menu li {
+      display: inline-block;
+    }
+
+    #menu li a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      width: 150px;
+      text-align: center;
+    }
+
+    #menu li a:hover {
+      background-color: #555;
+    }
+  </style>
+
+  <script>
+    // Função para adicionar eventos de clique
+    function adicionarEventos() {
+      // Seleciona todos os itens do menu
+      const itensMenu = document.querySelectorAll('#menu li a');
+      
+      // Adiciona o evento de clique em cada item do menu
+      itensMenu.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          // Previne o comportamento padrão (não vai recarregar a página)
+          event.preventDefault();
+          
+          // Exibe uma mensagem indicando qual item foi clicado
+          alert('Você clicou em: ' + item.textContent);
+        });
+      });
+    }
+
+    // Chama a função assim que o documento estiver carregado
+    document.addEventListener('DOMContentLoaded', adicionarEventos);
+  </script>
+</head>
+<body>
+  <h2>Menu Interativo</h2>
+  <ul id="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Serviços</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+</body>
+</html>

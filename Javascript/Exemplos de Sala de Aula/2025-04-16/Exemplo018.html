@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Image Carousel</title>
+
+  <style>
+    /* Estilos para o carousel */
+    .carousel {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      display: none; /* Inicialmente todas as imagens estão escondidas */
+    }
+
+    .carousel img.active {
+      display: block; /* Apenas a imagem ativa é exibida */
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+
+  <script>
+    // Função que inicializa o carousel e define os eventos
+    window.onload = function() {
+      const imagens = document.querySelectorAll(".carousel img"); // Seleciona todas as imagens dentro do carousel
+      let indiceAtual = 0; // Inicializa o índice da imagem atual
+
+      // Exibe a primeira imagem
+      imagens[indiceAtual].classList.add("active");
+
+      // Função para exibir a imagem seguinte
+      function mostrarProximaImagem() {
+        imagens[indiceAtual].classList.remove("active"); // Remove a classe "active" da imagem atual
+        indiceAtual = (indiceAtual + 1) % imagens.length; // Avança para a próxima imagem, volta para o início se chegar ao final
+        imagens[indiceAtual].classList.add("active"); // Exibe a próxima imagem
+      }
+
+      // Função para exibir a imagem anterior
+      function mostrarImagemAnterior() {
+        imagens[indiceAtual].classList.remove("active"); // Remove a classe "active" da imagem atual
+        indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length; // Retrocede para a imagem anterior, volta para o final se chegar ao início
+        imagens[indiceAtual].classList.add("active"); // Exibe a imagem anterior
+      }
+
+      // Adiciona eventos para os botões de navegação
+      const btnPrev = document.querySelector(".prev");
+      const btnNext = document.querySelector(".next");
+
+      btnPrev.addEventListener("click", mostrarImagemAnterior); // Ao clicar no botão "anterior", chama a função mostrarImagemAnterior
+      btnNext.addEventListener("click", mostrarProximaImagem); // Ao clicar no botão "próxima", chama a função mostrarProximaImagem
+    };
+  </script>
+</head>
+<body>
+
+  <h1>Image Carousel</h1>
+
+  <!-- Div do carousel com imagens -->
+  <div class="carousel">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tigre.jpg/1200px-Tigre.jpg" alt="Imagem 1">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Blue_merle_Border_Collie.jpg" alt="Imagem 2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/481px-Cat03.jpg" alt="Imagem 3">
+    
+    <!-- Botões de navegação -->
+    <button class="button prev">&lt;</button> <!-- Botão de voltar -->
+    <button class="button next">&gt;</button> <!-- Botão de avançar -->
+  </div>
+
+</body>
+</html>

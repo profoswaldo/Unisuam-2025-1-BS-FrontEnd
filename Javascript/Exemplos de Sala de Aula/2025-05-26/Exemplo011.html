@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soma e Subtração</title>
+    <script type="text/javascript">
+        // Função para somar dois números
+        function somar(a, b) {
+            return a + b;
+        }
+
+        // Função para subtrair dois números
+        function subtrair(a, b) {
+            return a - b;
+        }
+    </script>
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script type="text/javascript">
+        let valor1 = 10;
+        let valor2 = 5;
+
+        let resultadoSoma = somar(valor1, valor2);
+        let resultadoSubtracao = subtrair(valor1, valor2);
+
+        // Seleciona a div para exibir o resultado
+        let saida = document.getElementById("resultado");
+
+        // Usa innerHTML para colocar o resultado na página
+        saida.innerHTML = 
+            "Resultado da Soma: " + resultadoSoma + "<br>" + 
+            "Resultado da Subtração: " + resultadoSubtracao;
+    </script>
+</body>
+</html>

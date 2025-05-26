@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo: Método Privado</title>
+    <script type="text/javascript">
+        class Pessoa {
+            constructor(nome, anoNascimento) {
+                this.nome = nome;                  // Público
+                this.anoNascimento = anoNascimento; // Público
+            }
+
+            // Método privado para calcular a idade
+            #calcularIdade() {
+                const anoAtual = new Date().getFullYear();
+                return anoAtual - this.anoNascimento;
+            }
+
+            // Método público que usa o método privado
+            apresentar() {
+                return `Olá, meu nome é ${this.nome} e tenho ${this.#calcularIdade()} anos.`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="saida"></div>
+
+    <script type="text/javascript">
+        const p = new Pessoa("Oswaldo", 2000);
+
+        let saida = document.getElementById("saida");
+
+        // Chamando método público que usa o método privado
+        saida.innerHTML = p.apresentar();
+
+        // Tentativa de chamar o método privado diretamente:
+        // p.#calcularIdade();  // ❌ ERRO: Private field '#calcularIdade' must be declared in an enclosing class
+    </script>
+</body>
+</html>

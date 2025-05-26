@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo: Classe pública com innerHTML</title>
+    <script type="text/javascript">
+        class Pessoa {
+            constructor(nome, idade) {
+                this.nome = nome;   // Público
+                this.idade = idade; // Público
+            }
+
+            mostrar() {
+                return `Nome: ${this.nome}, Idade: ${this.idade}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="saida"></div>
+
+    <script type="text/javascript">
+        const p = new Pessoa("Oswaldo", 30);
+
+        let saida = document.getElementById("saida");
+
+        // Mostrando primeira vez
+        saida.innerHTML += p.mostrar() + "<br>";
+
+        // Modificando diretamente as propriedades
+        p.nome = "Gisele";
+        p.idade = 99;
+
+        // Mostrando novamente
+        saida.innerHTML += p.mostrar();
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo: Pseudo-privado com _idade</title>
+    <script type="text/javascript">
+        class Pessoa {
+            constructor(nome) {
+                this.nome = nome;    // Público
+                this._idade = 30;    // Pseudo-privado (por convenção)
+            }
+
+            mostrar() {
+                return `Nome: ${this.nome}, Idade: ${this._idade}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="saida"></div>
+
+    <script type="text/javascript">
+        const p = new Pessoa("Oswaldo");
+
+        let saida = document.getElementById("saida");
+
+        // Mostrando valores iniciais
+        saida.innerHTML += p.mostrar() + "<br>";
+
+        // Modificando diretamente as propriedades
+        p.nome = "Gisele";
+        p._idade = 99;
+
+        // Mostrando valores após modificação
+        saida.innerHTML += p.mostrar();
+    </script>
+</body>
+</html>

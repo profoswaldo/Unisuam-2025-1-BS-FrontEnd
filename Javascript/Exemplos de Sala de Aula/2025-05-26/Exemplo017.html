@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo: Público e Privado</title>
+    <script type="text/javascript">
+        class Pessoa {
+            #idade;  // Propriedade privada real
+
+            constructor(nome) {
+                this.nome = nome;  // Pública
+                this.#idade = 30;  // Privada
+            }
+
+            mostrar() {
+                return `Nome: ${this.nome}, Idade: ${this.#idade}`;
+            }
+
+            // Método público para alterar idade
+            setIdade(novaIdade) {
+                if (typeof novaIdade === 'number' && novaIdade > 0) {
+                    this.#idade = novaIdade;
+                } else {
+                    console.log("Idade inválida.");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="saida"></div>
+
+    <script type="text/javascript">
+        const p = new Pessoa("Oswaldo");
+
+        let saida = document.getElementById("saida");
+
+        // Mostrando valores iniciais
+        saida.innerHTML += p.mostrar() + "<br>";
+
+        // Modificando a propriedade pública diretamente
+        p.nome = "Gisele";
+
+        // Tentativa incorreta de acessar a propriedade privada:
+        // p.#idade = 99;   // ❌ Isso causaria ERRO de compilação
+
+        // Usando método público para alterar a idade
+        p.setIdade(99);
+
+        // Mostrando valores após modificação
+        saida.innerHTML += p.mostrar();
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Progress Indicator</title>
+    <script>
+       
+        function atualizarProgresso() {
+            const progresso = document.getElementById("progresso"); // Pega o elemento progress
+            let valor = 0; // Inicializa o valor do progresso
+
+            // Função que será chamada a cada 100ms para atualizar o progresso
+            const intervalo = setInterval(function() {
+                if (valor < 100) {
+                    valor += 1; // Aumenta o valor do progresso
+                    progresso.value = valor; // Atualiza o valor no elemento <progress>
+                } else {
+                    clearInterval(intervalo); // Para a atualização quando atingir 100%
+                    alert("Progresso concluído!"); // Exibe um alerta quando o progresso terminar
+                }
+            }, 100); // Atualiza a cada 100 milissegundos
+        }
+
+        // Adicionando um evento ao carregamento da página
+        window.addEventListener("load", function() {
+            // Adiciona o evento de click no botão
+            document.getElementById("iniciar").addEventListener("click", atualizarProgresso);
+        });
+    </script>
+</head>
+<body>
+    <h1>Exemplo de Indicador de Progresso</h1>
+    
+    <!-- Indicador de progresso, inicialmente com valor 0 e valor máximo 100 -->
+    <progress id="progresso" value="0" max="100"></progress>
+    
+    <br>
+    
+    <!-- Botão que inicia a atualização do progresso -->
+    <button id="iniciar">Iniciar Progresso</button>
+</body>
+</html>

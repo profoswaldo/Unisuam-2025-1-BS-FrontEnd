@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        class Vendas{
+            atribuir(){
+                this.qt = 5;
+                this.valorUnitario = 10;
+            }
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <script type="text/javascript">
+
+        let vendas = new Vendas();
+
+        vendas.atribuir();
+
+        let valorTotal = vendas.qt * vendas.valorUnitario;
+        
+        document.writeln("Valor em Estoque: " + valorTotal);
+
+
+
+
+    </script>
+</body>
+</html>

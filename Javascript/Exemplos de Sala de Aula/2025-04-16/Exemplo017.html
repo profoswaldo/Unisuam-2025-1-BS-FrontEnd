@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de List Box com addEventListener</title>
+  <script>
+   
+    function mostrarSelecao() {
+      
+      const listBox = document.getElementById("meuListBox");
+
+      
+      const opcaoSelecionada = listBox.value;
+
+      
+      console.log("Você selecionou: " + opcaoSelecionada);
+
+      
+      document.getElementById("resultado").innerHTML = "Você escolheu: " + opcaoSelecionada;
+    }
+
+  
+    window.onload = function() {
+      
+      const listBox = document.getElementById("meuListBox");
+
+      // Adicionamos o evento de 'change' para disparar a função 'mostrarSelecao'
+      listBox.addEventListener("change", mostrarSelecao);
+    };
+  </script>
+</head>
+<body>
+  <h2>Escolha uma opção:</h2>
+
+  <!-- O List Box com opções -->
+  <select id="meuListBox">
+    <option value="opcao1">Opção 1</option>
+    <option value="opcao2">Opção 2</option>
+    <option value="opcao3">Opção 3</option>
+    <option value="opcao4">Opção 4</option>
+  </select>
+
+
+  <p id="resultado"></p>
+</body>
+</html>

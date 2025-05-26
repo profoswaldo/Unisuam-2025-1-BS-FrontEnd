@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Completo</title>
+    <script type="text/javascript">
+        class ContaBancaria {
+            #saldo = 0;            // Atributo privado
+            #titular;              // Atributo privado
+
+            constructor(nomeTitular) {
+                this.#titular = nomeTitular;
+                this.#log("Conta criada para " + nomeTitular);
+            }
+
+            // Método privado
+            #log(mensagem) {
+                console.log("[LOG]: " + mensagem);
+            }
+
+            // Método público: depositar
+            depositar(valor) {
+                if (valor > 0) {
+                    this.#saldo += valor;
+                    this.#log(`Depósito de R$ ${valor}`);
+                } else {
+                    console.log("Valor de depósito inválido.");
+                }
+            }
+
+            // Método público: sacar
+            sacar(valor) {
+                if (valor > 0 && valor <= this.#saldo) {
+                    this.#saldo -= valor;
+                    this.#log(`Saque de R$ ${valor}`);
+                } else {
+                    console.log("Saque inválido ou saldo insuficiente.");
+                }
+            }
+
+            // Getter para saldo
+            get saldo() {
+                return this.#saldo;
+            }
+
+            // Setter para titular
+            set titular(novoTitular) {
+                if (typeof novoTitular === 'string' && novoTitular.length > 0) {
+                    this.#titular = novoTitular;
+                    this.#log(`Titular alterado para ${novoTitular}`);
+                } else {
+                    console.log("Nome de titular inválido.");
+                }
+            }
+
+            // Getter para titular
+            get titular() {
+                return this.#titular;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="saida"></div>
+
+    <script type="text/javascript">
+        const conta = new ContaBancaria("Oswaldo");
+
+        // Métodos públicos
+        conta.depositar(500);
+        conta.sacar(200);
+
+        // Acessando via get
+        let saida = document.getElementById("saida");
+        saida.innerHTML += `Titular: ${conta.titular}<br>`;
+        saida.innerHTML += `Saldo atual: R$ ${conta.saldo}<br>`;
+
+        // Alterando via set
+        conta.titular = "Maria";
+
+        saida.innerHTML += `Novo titular: ${conta.titular}<br>`;
+
+        // Tentativa incorreta de acessar atributo privado
+        // console.log(conta.#saldo);   ❌ ERRO: Private field must be declared
+        // conta.#log("Teste");         ❌ ERRO: Private method inaccessible
+    </script>
+</body>
+</html>

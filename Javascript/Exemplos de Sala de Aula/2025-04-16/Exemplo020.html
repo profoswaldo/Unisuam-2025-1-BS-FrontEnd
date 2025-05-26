@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Navigation Bar</title>
+
+    <!-- Estilos da página -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            height: 500px;
+        }
+    </style>
+
+    <script>
+        // Função que muda o conteúdo da página
+        function mudarConteudo(event) {
+            const nomeBotao = event.target.textContent; // Pega o nome do botão clicado
+            const contentDiv = document.querySelector('.content'); // Encontra a área de conteúdo
+
+            // Muda o conteúdo com base no botão clicado
+            if (nomeBotao === 'Página Inicial') {
+                contentDiv.innerHTML = '<h2>Bem-vindo à Página Inicial!</h2><p>Conteúdo da página inicial.</p>';
+            } else if (nomeBotao === 'Sobre') {
+                contentDiv.innerHTML = '<h2>Sobre Nós</h2><p>Conteúdo sobre a empresa.</p>';
+            } else if (nomeBotao === 'Contato') {
+                contentDiv.innerHTML = '<h2>Entre em Contato</h2><p>Informações de contato.</p>';
+            }
+        }
+
+        // Espera a página carregar para adicionar os event listeners
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Pega todos os links de navegação
+            const links = document.querySelectorAll('nav ul li a');
+
+            // Adiciona o evento de clique para cada link
+            links.forEach((link) => {
+                link.addEventListener('click', mudarConteudo); // Adiciona a função ao evento de clique
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Área de Conteúdo -->
+    <div class="content">
+        <h2>Bem-vindo!</h2>
+        <p>Clique nas opções da barra de navegação para ver o conteúdo.</p>
+    </div>
+
+</body>
+</html>

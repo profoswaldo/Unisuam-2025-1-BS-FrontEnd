@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora com Get e Set</title>
+    <script type="text/javascript">
+        class Calculadora {
+            constructor() {
+                this._valor1 = 0;
+                this._valor2 = 0;
+            }
+
+            // Getter e Setter para valor1
+            get valor1() {
+                return this._valor1;
+            }
+
+            set valor1(v) {
+                if (typeof v === 'number') {
+                    this._valor1 = v;
+                } else {
+                    console.log("Valor1 deve ser um número.");
+                }
+            }
+
+            // Getter e Setter para valor2
+            get valor2() {
+                return this._valor2;
+            }
+
+            set valor2(v) {
+                if (typeof v === 'number') {
+                    this._valor2 = v;
+                } else {
+                    console.log("Valor2 deve ser um número.");
+                }
+            }
+
+            // Método para somar
+            somar() {
+                return this._valor1 + this._valor2;
+            }
+
+            // Método para subtrair
+            subtrair() {
+                return this._valor1 - this._valor2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script type="text/javascript">
+        let calculadora = new Calculadora();
+
+        // Usando set para definir os valores
+        calculadora.valor1 = 10;
+        calculadora.valor2 = 5;
+
+        // Usando métodos para calcular
+        let resultadoSoma = calculadora.somar();
+        let resultadoSubtracao = calculadora.subtrair();
+
+        // Exibindo resultados
+        let saida = document.getElementById("resultado");
+
+        saida.innerHTML = 
+            "Resultado da Soma: " + resultadoSoma + "<br>" + 
+            "Resultado da Subtração: " + resultadoSubtracao;
+    </script>
+</body>
+</html>

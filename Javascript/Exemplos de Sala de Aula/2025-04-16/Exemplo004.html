@@ -1,35 +1,24 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>addEventListener com múltiplas funções</title>
-</head>
-<body>
-  <h2>addEventListener: várias funções em um único clique</h2>
+    <head>
 
-  <button id="botao">Clique aqui</button>
+        <script>
+            document.getElementById("p2").innerText="Oswaldão Sangue Bom"
+        </script>
 
-  <script>
-    const botao = document.getElementById("botao");
+    </head>
 
-    // Função 1: mostra alerta
-    function mostrarAlerta() {
-      alert("Função 1: Alerta!");
-    }
+    <body>
+        <p id="p1">
+            Vovo viu a uva
+        </p>
 
-    // Função 2: escreve no console
-    function escreverConsole() {
-      console.log("Função 2: Escrevendo no console...");
-    }
+        <p id="p2">
+            The books on the table
+        </p>
 
-    // Função 3: muda o texto do botão
-    function mudarTextoDoBotao() {
-      botao.textContent = "Você clicou!";
-    }
+        <p>
+            Aula de Javascript
+        </p>
+    </body>
 
-    // Adiciona as três funções ao mesmo botão
-    botao.addEventListener("click", mostrarAlerta);
-    botao.addEventListener("click", escreverConsole);
-    botao.addEventListener("click", mudarTextoDoBotao);
-  </script>
-</body>
 </html>

@@ -1,43 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo de Search Bar</title>
-  <script>
-    // Função que será chamada quando o botão for clicado
-    function pesquisar() {
-      // Pegamos o valor digitado no campo de pesquisa
-      const termoDeBusca = document.getElementById('campoPesquisa').value;
-      
-      // Exibimos o termo de pesquisa no console
-      console.log("Você pesquisou por: " + termoDeBusca);
-      
-      // Se o campo estiver vazio, informamos ao usuário
-      if (!termoDeBusca) {
-        alert("Por favor, digite algo para pesquisar.");
-      }
-    }
-
-    // Adicionamos o 'event listener' assim que a página carregar
-    window.addEventListener('DOMContentLoaded', function() {
-      // Pegamos o botão de pesquisa pelo ID
-      const botaoPesquisa = document.getElementById('botaoPesquisa');
-      
-      // Adicionamos um evento de clique ao botão
-      botaoPesquisa.addEventListener('click', pesquisar);
-    });
-  </script>
+  <title>Exemplo - onclick no HTML</title>
 </head>
 <body>
-
-  <h2>Pesquisa no Sistema</h2>
-
-  <!-- Barra de pesquisa -->
-  <input type="text" id="campoPesquisa" placeholder="Digite o que deseja pesquisar...">
-  
-  <!-- Botão de pesquisa -->
-  <button id="botaoPesquisa">Pesquisar</button>
-
+  <h2>Exemplo: onclick no HTML</h2>
+  <button onclick="alert('Cliquei no botão 1!')">Clique aqui (HTML)</button>
 </body>
 </html>

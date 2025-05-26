@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <script type="text/javascript">
+        // Definição da classe Calculadora
+        class Calculadora {
+            somar(a, b) {
+                return a + b;
+            }
+
+            subtrair(a, b) {
+                return a - b;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script type="text/javascript">
+        // Criando uma instância da classe Calculadora
+        let calculadora = new Calculadora();
+
+        let valor1 = 10;
+        let valor2 = 5;
+
+        let resultadoSoma = calculadora.somar(valor1, valor2);
+        let resultadoSubtracao = calculadora.subtrair(valor1, valor2);
+
+        let saida = document.getElementById("resultado");
+
+        saida.innerHTML = 
+            "Resultado da Soma: " + resultadoSoma + "<br>" + 
+            "Resultado da Subtração: " + resultadoSubtracao;
+    </script>
+</body>
+</html>

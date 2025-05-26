@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        class Vendas{
+
+            constructor(){
+                this.qt = 1;
+                this.valorUnitario = 1;
+            }
+
+            calcular(){
+                return this.qt * this.valorUnitario;
+            }
+
+            set lerQt(qt){
+                this.qt = qt;
+            }
+
+            set lerValorUnitario(valorUnitario){
+                this.valorUnitario = valorUnitario;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <script type="text/javascript">
+
+        let vendas = new Vendas(5,10);
+
+        vendas.lerQt=8;
+        vendas.lerValorUnitario=20;
+        
+        document.writeln("Valor em Estoque: " + vendas.calcular());
+
+
+
+
+    </script>
+</body>
+</html>
